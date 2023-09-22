@@ -1,0 +1,28 @@
+{
+  "name": "crud-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "server": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snastia/crud-hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snastia/crud-hw/issues"
+  },
+  "homepage": "https://github.com/snastia/crud-hw#readme",
+  "dependencies": {
+    "json-server": "^0.17.3",
+    "parcel": "^2.9.3"
+  }
+}

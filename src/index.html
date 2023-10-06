@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Films</title>
 </head>
 <body>
-    <form class="form" action="">
-        <button type="submit" class="btn-finish">Зберегти</button>
+    <form class="js-form" action="">
+        <label for="">
+            Title
+           <input name="title" type="text">
+        </label>
+        <label for="">
+            Genre
+            <input name="genre" type="text">
+        </label>
+        <label for="">
+            Director
+            <input name="director" type="text">
+        </label>
+        <label for="">
+            Year
+        <input name="year" type="text">
+        </label>
+        <button type="submit" class="btn-finish">Створити</button>
     </form>
+    <button type="button" class="btn-list">Список фільмів</button>
+    <ul class="js-list"></ul>
+    <div class="box"></div>
     <script type="module" src="./index.js"></script>
 </body>
 </html>

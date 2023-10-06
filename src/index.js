@@ -1,7 +1,11 @@
+import filmsTpl from "./films.handlebars"
+
 const BASE_URL = 'http://localhost:3000/movies';
 
 const btnEl = document.querySelector(".btn-finish")
-const formEl = document.querySelector(".form")
+const formEl = document.querySelector(".js-form")
+const btnListEl = document.querySelector(".btn-list")
+const listEl = document.querySelector(".js-list")
 
 function getMovies(){
     return fetch(`${BASE_URL}`)
@@ -32,9 +36,21 @@ function postMovies(newMovie){
     .then(response => response.json())
 }
 
-postMovies({
-    title: "Harry Potter",
-    genre: "Fantastic",
-    director: "Someone",
-    year: 1991
-}).then(response => console.log(response))
+formEl.addEventListener("submit", (event) => {
+    event.preventDefault()
+    const newFilm = {
+       title: event.currentTarget.elements.title.value,
+       genre: event.currentTarget.elements.genre.value,
+       director: event.currentTarget.elements.director.value,
+       year: event.currentTarget.elements.year.value
+    }
+    postMovies(newFilm)
+    console.log(newFilm)
+})
+
+btnListEl.addEventListener("click", () => {
+    getMovies().then(movies => {
+        const markup = filmsTpl(movies)
+        listEl.insertAdjacentHTML("beforeend", markup)
+    })
+})

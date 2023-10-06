@@ -24,5 +24,9 @@
   "dependencies": {
     "json-server": "^0.17.3",
     "parcel": "^2.9.3"
+  },
+  "devDependencies": {
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-transformer-hbs": "^1.0.4"
   }
 }
